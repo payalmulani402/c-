@@ -1,0 +1,1 @@
+lic Base1,public Base2

@@ -3,43 +3,35 @@ using namespace std;
 class Base1
 {
     protected:
-    int n,i;
+    int n;
     public:
-    void setn()
+    void setn(int x)
     {
-        cout<<"enter the number: ";
-        cin>>n;
+        n=x;
     }
 };
-class Base2
+class Base2 : public Base1
 {
     protected:
     int m;
     public:
-    void setm()
+    void setm(int x)
     {
-        cout<<"enter the number:";
-        cin>>m;
+        m=x;
     }
 };
-class Dervied: public Base1,public Base2
+class Dervied: public Base2
 {
     public:
-    void odd()
+    void mul()
     {
-        for (i=m;i<n;i++)
-        {
-            if (i%2!=0)
-            {
-                cout<<" "<<i<<endl;
-            }
-        }
+        cout <<"multiplication of m and n is : "<< m*n<<endl;
     }
 };
 int main()
 {
     Dervied d;
-    d.setn();
-    d.setm();
-    d.odd();
+    d.setn(10);
+    d.setm(5);
+    d.mul();
 }

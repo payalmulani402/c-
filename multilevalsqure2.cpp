@@ -7,38 +7,38 @@ class Base1
     public:
     void setn()
     {
-        cout<<"enter the number: ";
+        cout<<"enter the n:";
         cin>>n;
     }
 };
-class Base2
+class Base2 : public Base1
 {
     protected:
-    int m;
+    int n;
     public:
     void setm()
     {
         cout<<"enter the number:";
-        cin>>m;
+        cin>>n;
     }
 };
-class Dervied: public Base1,public Base2
+class Dervied: public Base2
 {
     public:
-    void squer()
+    void squre()
     {
-        for (i=m;i<n;i++)
+        for(i=0;i<n;i++)
         
-            {
-                cout<<"value of n:"<<i*i <<endl;
-            }
+        {
+            cout<<"  "<<i*i<<endl;
+        }
+        
     }
-    
 };
 int main()
 {
     Dervied d;
     d.setn();
     d.setm();
-    d.squer();
+    d.squre();
 }
